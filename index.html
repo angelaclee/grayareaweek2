@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
-    <meta charset=UTF-8 />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Rain Season</title>
+  	<meta charset=UTF-8 />
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Seasons</title>
   </head>
   <body>
-      <div id="raincontainer">
+    <script src="/libraries/p5.min.js"></script>
+    <script src="sketch.js"></script>
+
+    <div id='bigdiv'>
+      <div class="season">
+        <div class="spring"></div>
+      </div>
+      <div class="season"></div>
+      <div class="season"></div>
+      <div class="season">
+      	<div id="raincontainer">
             <h1>And this too shall pass...</h1>
             <script src="three.min.js"></script>
             <script>
@@ -88,7 +99,7 @@
             rainGeo.verticesNeedUpdate = true;
             rain.rotation.y +=0.002;
             if(Math.random() > 0.93 || flash.power > 100) {
-                if(flash.power < 100) 
+                if(flash.power < 100)
                 flash.position.set(
                     Math.random()*400,
                     300 + Math.random() *200,
@@ -102,5 +113,8 @@
             init();
             </script>
         </div>
+      </div>
+    </div>
   </body>
+
 </html>
