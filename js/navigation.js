@@ -1,45 +1,40 @@
 
-var seasonIdx = 0;
+var seasonIdx = -1;
 
 $(document).keypress(function(e) {
 	console.log("key pressed! idx", seasonIdx);
 
 	// get the element that fired the onkeydown function
     let keyCode = e.keyCode;
+    console.log(keyCode);
 
-    if (e.keyCode == '78') { // n
+    if (e.keyCode == '110') { // n
+        console.log('n!');
     	seasonIdx = (seasonIdx + 1) % 4;
     }
 
-    seasons = document.getElementsByClassName('season');
-    seasons.each()
-    for (let i = 0; i < 4; i++) {
-    	s = $(`season:nth-child(${i+1})`)
-    	console.log(`season:nth-child(${i+1})`, s);
-    	if (i != seasonIdx) {
-    		s.hide();
-    	} else {
-    		s.show();
-    	}
+    if (seasonIdx == 0) {
+        $('#season1').show();
+        $('#season2').hide();
+        $('#season3').hide();
+        $('#season4').hide();
+    }
+    if (seasonIdx == 1) {
+        $('#season1').hide();
+        $('#season2').show();
+        $('#season3').hide();
+        $('#season4').hide();
+    }
+    if (seasonIdx == 2) {
+        $('#season1').hide();
+        $('#season2').hide();
+        $('#season3').show();
+        $('#season4').hide();
+    }
+    if (seasonIdx == 3) {
+        $('#season1').hide();
+        $('#season2').hide();
+        $('#season3').hide();
+        $('#season4').show();
     }
 });
-//     seasons[seasonIdx].focus();
-
-//     #haze {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   background: silver;
-//   opacity: 0%;
-// }
-
-// #haze:hover {
-//   animation: haze 5s ease-in 0s forwards;
-// }
-
-// @keyframes haze {
-//   0% { opacity: 30% }
-//   100% { opacity: 100% }
-// }
-
-// });
