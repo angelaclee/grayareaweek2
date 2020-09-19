@@ -7,12 +7,12 @@ var canvasHeight = window.innerHeight;
 var borderTop = 0.01 * canvasHeight;
 var borderBottom = 0.99 * canvasHeight;
 var imageObj = new Image();
-imageObj.onload = function() {
-  particles.forEach(function(particle) {
-    particle.setImage(imageObj);
-  });
-};
-imageObj.src = "http://www.blog.jonnycornwell.com/wp-content/uploads/2012/07/Smoke10.png";
+//imageObj.onload = function() {
+//  particles.forEach(function(particle) {
+//    particle.setImage(imageObj);
+//  });
+//};
+//imageObj.src = "http://www.blog.jonnycornwell.com/wp-content/uploads/2012/07/Smoke10.png"; 
 function Particle(context) {
   this.x = 0;
   this.y = 0;
@@ -70,7 +70,15 @@ function generateRandom(min, max) {
 var context;
 // Initialise the scene and set the context if possible
 function init() {
+    var imageObj = new Image();
+    imageObj.onload = function() {
+    particles.forEach(function(particle) {
+    particle.setImage(imageObj);
+  });
+};
+imageObj.src = "http://www.blog.jonnycornwell.com/wp-content/uploads/2012/07/Smoke10.png";
   var canvas = document.getElementById('myCanvas');
+  console.log(canvas);
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   if (canvas.getContext) {
@@ -84,6 +92,15 @@ function init() {
     }
   } else {
     alert("Please use a modern browser");
+  }
+  
+  if (context) {
+    setInterval(function() {
+      // Update the scene befoe drawing
+      update();
+      // Draw the scene
+      draw();
+    }, 1000 / targetFPS);
   }
 }
 // The function to draw the scene
@@ -106,15 +123,20 @@ function update() {
     particle.update();
   });
 }
-// Initialize the scene
-init();
+
 var backImg = document.getElementById("back");
   // If the context is set then we can draw the scene (if not then the browser does not support canvas)
-  if (context) {
-    setInterval(function() {
-      // Update the scene befoe drawing
-      update();
-      // Draw the scene
-      draw();
-    }, 1000 / targetFPS);
-  }
+//  if (context) {
+//    setInterval(function() {
+//      // Update the scene befoe drawing
+//      update();
+//      // Draw the scene
+//      draw();
+ //   }, 1000 / targetFPS);
+ // }
+
+  // Initialize the scene
+window.addEventListener('load', (event) => {
+    console.log('page is fully loaded');
+    init();
+  });
