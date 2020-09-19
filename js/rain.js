@@ -2,18 +2,18 @@ function init(){
     var canvas = document.querySelector('canvas');
     var buffer = document.createElement('canvas');
     var canvasCBR = canvas.getBoundingClientRect();
-    
+
     canvas.width = canvasCBR.width;
     canvas.height = canvasCBR.height;
     buffer.width = canvas.width;
     buffer.height = canvas.height;
-    
+
     var ctx = canvas.getContext('2d');
     var bufferCtx = buffer.getContext('2d');
     var canvasHeight, canvasWidth;
     var animations = [];
     var numberOfDrops = 220;
-    
+
     var createDrop = function(){
       var drop = {};
       drop.color = 'white';
@@ -43,7 +43,7 @@ function init(){
       drop.update();
       return drop;
     };
-    
+
     var getRainDrops = function(){
       var drops = [];
       for(var i = 0; i < numberOfDrops; i++){
@@ -51,9 +51,9 @@ function init(){
       }
       return drops;
     };
-    
+
     var rainDrops = getRainDrops();
-    
+
     anime({
       targets: rainDrops,
       duration: Infinity,
@@ -67,16 +67,16 @@ function init(){
       }
     });
   }
-  
+
   document.addEventListener('DOMContentLoaded', init);
 
   document.addEventListener('DOMContentLoaded', () => {
     var canvas = document.createElement('canvas')
-  
+
     var container = document.querySelector('.rain')
-  
+
     container.appendChild(canvas)
-  
+
   })
 
-  
+
