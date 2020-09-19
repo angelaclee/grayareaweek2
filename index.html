@@ -4,14 +4,18 @@
   	<meta charset=UTF-8 />
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<!-- <link rel="stylesheet" href="/css/fog.css"> -->
 
 
-	<script src="js/spring.js"></script>
     <script src="js/libs/p5.min.js"></script>
     <script src='js/libs/jquery.min.js'></script>
     <script src="js/libs/parallax.min.js"></script>
-    <script src="js/libs/three.min.js"></script>
+    <!-- <script src="js/libs/three.min.js"></script> -->
     <script src='js/libs/anime.min.js'></script>
+
+	<script src="js/spring.js"></script>
+    <script src="js/fog.js"></script>
+
 
     <title>Seasons</title>
   </head>
@@ -43,13 +47,26 @@
 		  </div>
 	  </div>
 
-      <!-- <div class="season"></div> -->
+      <div class="season">
+      	<img id="back" width="100%" height="auto" src="https://ello-direct-uploads.s3.amazonaws.com/uploads/dcf88e0e-8022-49d0-9afc-fe3a38dc872b/ello-eb524688-b3a6-4448-91e7-373c9d3794e3.jpeg" />
+      	<div class="u-full-width">
+		  <center>
+		    <canvas id="myCanvas" width="900" height="600"></canvas>
+		  </center>
+		</div>
+
+		<div id="headText">fog</div>
+
+
+      </div>
       <div class="season">
       	<div id="rain">
 		  <img src="assets/clouds.png" width="100%">
 		  <canvas id="rain" width="1200" height="400" style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
 
-		    <script  src="js/rain.js"></script>
+		    <script  src="js/rain.js">
+		    </script>
+
 		</div>
       </div>
   <script src="js/fire.js"></script>
