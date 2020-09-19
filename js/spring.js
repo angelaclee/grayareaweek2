@@ -2,9 +2,9 @@
 
 let sketch = function(p) {
   p.setup = function() {
-  p.createCanvas(1200, 400);
+  p.let cnv = createCanvas(1200, 400);
   p.background(87, 210, 214,);
-
+  p.cnv.id('spring');
  p.noStroke();
 
  let c = p.color (235, 235, 84)
