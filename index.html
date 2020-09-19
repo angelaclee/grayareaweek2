@@ -3,15 +3,17 @@
   <head>
   	<meta charset=UTF-8 />
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>Seasons</title>
   </head>
   <body>
-    <script src="/libraries/p5.min.js"></script>
-    <script src="sketch.js"></script>
+    <script src="js/spring.js"></script>
     <script src="js/fire.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+    <script src="js/libs/p5.min.js"></script>
+    <script src='js/libs/jquery.min.js'></script>
+    <script src="js/libs/parallax.min.js"></script>
+    <script src="js/libs/three.min.js"></script>
 
     <div id='bigdiv'>
       <div class="season">
@@ -20,16 +22,16 @@
       <div class="season">
 		  <div id="scene">
 		    <div class="flame-outline" data-depth='1.0'>
-		      <object data="https://www.clipartmax.com/png/full/326-3263841_race-car-flames-svg-free-techflourish-collections-fire-clipart-png.png" type="image/png"></object>
+		      <object data="assets/flamesss.png" type="image/png"></object>
 		    </div>
 		        <div class="flame-outline" data-depth = '0.75'>
-		      <object data="https://www.clipartmax.com/png/full/326-3263841_race-car-flames-svg-free-techflourish-collections-fire-clipart-png.png" type="image/png"></object>
+		      <object data="assets/flamesss.png" type="image/png"></object>
 		    </div>
 		        <div class="flame-outline" data-depth = '0.5'>
-		      <object data="https://www.clipartmax.com/png/full/326-3263841_race-car-flames-svg-free-techflourish-collections-fire-clipart-png.png" type="image/png"></object>
+		      <object data="assets/flamesss.png" type="image/png"></object>
 		    </div>
 		        <div class="flame-outline" data-depth='0.25'>
-		      <object data="https://www.clipartmax.com/png/full/326-3263841_race-car-flames-svg-free-techflourish-collections-fire-clipart-png.png" type="image/png"></object>
+		      <object data="assets/flamesss.png" type="image/png"></object>
 		    </div>
 		  </div>
 
@@ -38,7 +40,6 @@
       <div class="season">
       	<div id="raincontainer">
             <h1>And this too shall pass...</h1>
-            <script src="three.min.js"></script>
             <script>
             let scene,camera, renderer, cloudParticles = [], flash, rain, rainGeo, rainCount = 1800;
             function init() {
@@ -80,7 +81,7 @@
             rain = new THREE.Points(rainGeo,rainMaterial);
             scene.add(rain);
             let loader = new THREE.TextureLoader();
-            loader.load("smoke.png", function(texture){
+            loader.load("assets/smoke.png", function(texture){
                 cloudGeo = new THREE.PlaneBufferGeometry(500,500);
                 cloudMaterial = new THREE.MeshLambertMaterial({
                 map: texture,
