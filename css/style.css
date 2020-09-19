@@ -1,0 +1,10 @@
+.clouds {
+    background-image: url("clouds.png");
+  }
+
+#spring {
+  position: absolute;
+  background-color: blue;
+  overflow: hidden;
+
+}

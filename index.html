@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  	<meta charset=UTF-8 />
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+
+	<script src="js/spring.js"></script>
+    <script src="js/libs/p5.min.js"></script>
+    <script src='js/libs/jquery.min.js'></script>
+    <script src="js/libs/parallax.min.js"></script>
+    <script src="js/libs/three.min.js"></script>
+    <script src='js/libs/anime.min.js'></script>
+
+    <title>Seasons</title>
+  </head>
+  <body>
+
+    <div id='bigdiv'>
+      <div class="season">
+        <div id="spring">
+        	<script>
+        		new p5(sketch, window.document.getElementById('spring'));
+        	</script>
+        </div>
+      </div>
+
+      <div class="season">
+		  <div id="scene">
+		    <div class="flame-outline" data-depth = '1.0'>
+		      <object data="assets/flamesss.png" type="image/png"></object>
+		    </div>
+ 		    <div class="flame-outline" data-depth = '0.75'>
+		      <object data="assets/flamesss.png" type="image/png"></object>
+		    </div>
+		    <div class="flame-outline" data-depth = '0.5'>
+		      <object data="assets/flamesss.png" type="image/png"></object>
+		    </div>
+		    <div class="flame-outline" data-depth='0.25'>
+		      <object data="assets/flamesss.png" type="image/png"></object>
+		    </div>
+		  </div>
+	  </div>
+
+      <!-- <div class="season"></div> -->
+      <div class="season">
+      	<div id="rain">
+		  <img src="assets/clouds.png" width="100%">
+		  <canvas id="rain" width="1200" height="400" style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
+
+		    <script  src="js/rain.js"></script>
+		</div>
+      </div>
+  <script src="js/fire.js"></script>
+  </body>
+
+</html>
