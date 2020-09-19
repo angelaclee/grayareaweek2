@@ -8,7 +8,12 @@
     <script src="js/libs/p5.min.js"></script>
     <script src='js/libs/jquery.min.js'></script>
     <script src="js/libs/parallax.min.js"></script>
-    <script src="js/libs/three.min.js"></script>
+    <!-- <script src="js/libs/three.min.js"></script> -->
+    <script src='js/libs/anime.min.js'></script>
+
+	<script src="js/spring.js"></script>
+    <script src="js/fog.js"></script>
+
 
     <script src="js/spring.js"></script>
 	<script src="js/navigation.js"></script>
@@ -17,9 +22,8 @@
   </head>
   <body>
 
-
     <div id='bigdiv'>
-      <div class="season">
+      <div id="season season1">
         <div id="spring">
         	<script>
         		new p5(sketch, window.document.getElementById('spring'));
@@ -27,7 +31,7 @@
         </div>
       </div>
 
-      <div class="season">
+      <div id="season season2">
 		  <div id="scene">
 		    <div class="flame-outline" data-depth = '1.0'>
 		      <object data="assets/flamesss.png" type="image/png"></object>
@@ -44,106 +48,28 @@
 		  </div>
 	  </div>
 
-      <div class="season"></div>
-      <div class="season"></div>
-      <!-- <div class="season">
-      	<div id="raincontainer">
-            <h1>And this too shall pass...</h1>
-            <script>
-            let scene,camera, renderer, cloudParticles = [], flash, rain, rainGeo, rainCount = 1800;
-            function init() {
-            scene = new THREE.Scene();
-            camera = new THREE.PerspectiveCamera(55,window.innerWidth / window.innerHeight, 1, 1000);
-            camera.position.z = 3;
-            camera.rotation.x = 1.16;
-            camera.rotation.y = -0.12;
-            camera.rotation.z = 0.27;
-            ambient = new THREE.AmbientLight(0x555555);
-            scene.add(ambient);
-            directionalLight = new THREE.DirectionalLight(0xEB4326);
-            directionalLight.position.set(5,0,2);
-            scene.add(directionalLight);
-            flash = new THREE.PointLight(0x062d89, 30, 280 ,2.7);
-            flash.position.set(100,100,100);
-            scene.add(flash);
-            renderer = new THREE.WebGLRenderer();
-            scene.fog = new THREE.FogExp2(0xF67C1B, 0.0001);
-            renderer.setClearColor(scene.fog.color);
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            document.body.appendChild(renderer.domElement);
-            rainGeo = new THREE.Geometry();
-            for(let i=0;i<rainCount;i++) {
-                rainDrop = new THREE.Vector3(
-                Math.random() * 400 -300,
-                Math.random() * 500 - 250,
-                Math.random() * 400 - 200
-                );
-                rainDrop.velocity = {};
-                rainDrop.velocity = 0;
-                rainGeo.vertices.push(rainDrop);
-            }
-            rainMaterial = new THREE.PointsMaterial({
-                color: 0xffffff,
-                size: .2,
-                transparent: true
-            });
-            rain = new THREE.Points(rainGeo,rainMaterial);
-            scene.add(rain);
-            let loader = new THREE.TextureLoader();
-            loader.load("assets/smoke.png", function(texture){
-                cloudGeo = new THREE.PlaneBufferGeometry(500,500);
-                cloudMaterial = new THREE.MeshLambertMaterial({
-                map: texture,
-                transparent: true
-                });
-                for(let p=0; p<25; p++) {
-                let cloud = new THREE.Mesh(cloudGeo,cloudMaterial);
-                cloud.position.set(
-                    Math.random()*850 -400,
-                    500,
-                    Math.random()*500 - 450
-                );
-                cloud.rotation.x = 1.16;
-                cloud.rotation.y = -0.12;
-                cloud.rotation.z = Math.random()*360;
-                cloud.material.opacity = 0.6;
-                cloudParticles.push(cloud);
-                scene.add(cloud);
-                }
-                animate();
-            });
-            }
-            function animate() {
-            cloudParticles.forEach(p => {
-                p.rotation.z -=0.002;
-            });
-            rainGeo.vertices.forEach(p => {
-                p.velocity -= 0.1 + Math.random() * 0.1;
-                p.y += p.velocity;
-                if (p.y < -200) {
-                p.y = 200;
-                p.velocity = 0;
-                }
-            });
-            rainGeo.verticesNeedUpdate = true;
-            rain.rotation.y +=0.002;
-            if(Math.random() > 0.93 || flash.power > 100) {
-                if(flash.power < 100)
-                flash.position.set(
-                    Math.random()*400,
-                    300 + Math.random() *200,
-                    100
-                );
-                flash.power = 50 + Math.random() * 500;
-            }
-            renderer.render(scene, camera);
-            requestAnimationFrame(animate);
-            }
-            init();
-            </script>
-        </div> -->
+      <div id="season season3">
+      	<img id="back" width="100%" height="auto" src="https://ello-direct-uploads.s3.amazonaws.com/uploads/dcf88e0e-8022-49d0-9afc-fe3a38dc872b/ello-eb524688-b3a6-4448-91e7-373c9d3794e3.jpeg" />
+      	<div class="u-full-width">
+		  <center>
+		    <canvas id="myCanvas" width="900" height="600"></canvas>
+		  </center>
+		</div>
+
+		<div id="headText">fog</div>
+
+
       </div>
-    </div>
+      <div class="season season4">
+      	<div id="rain">
+		  <img src="assets/clouds.png" width="100%">
+		  <canvas id="rain" width="1200" height="400" style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
+
+		    <script  src="js/rain.js">
+		    </script>
+
+		</div>
+      </div>
   <script src="js/fire.js"></script>
   </body>
 
