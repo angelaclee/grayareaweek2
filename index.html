@@ -4,33 +4,38 @@
   	<meta charset=UTF-8 />
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script src="js/fire.js"></script>
+	<script src="js/spring.js"></script>
+    <script src="js/libs/p5.min.js"></script>
+    <script src='js/libs/jquery.min.js'></script>
+    <!-- <script src="js/libs/parallax.min.js"></script> -->
+    <script src="js/libs/three.min.js"></script>
+
     <title>Seasons</title>
   </head>
   <body>
-    <script src="js/spring.js"></script>
-    <script src="js/fire.js"></script>
 
-    <script src="js/libs/p5.min.js"></script>
-    <script src='js/libs/jquery.min.js'></script>
-    <script src="js/libs/parallax.min.js"></script>
-    <script src="js/libs/three.min.js"></script>
 
     <div id='bigdiv'>
       <div class="season">
-        <div class="spring"></div>
+        <div id="spring">
+        	<script>
+        		new p5(sketch, window.document.getElementById('spring'));
+        	</script>
+        </div>
       </div>
-      <div class="season">
+      <!-- <div class="season">
 		  <div id="scene">
-		    <div class="flame-outline" data-depth='1.0'>
+		    <div class="flame-outline" data-depth='1.0' background-image="assets/flamesss.png">
+		    </div>
+ 		    <div class="flame-outline" data-depth = '0.75'>
 		      <object data="assets/flamesss.png" type="image/png"></object>
 		    </div>
-		        <div class="flame-outline" data-depth = '0.75'>
+		    <div class="flame-outline" data-depth = '0.5'>
 		      <object data="assets/flamesss.png" type="image/png"></object>
 		    </div>
-		        <div class="flame-outline" data-depth = '0.5'>
-		      <object data="assets/flamesss.png" type="image/png"></object>
-		    </div>
-		        <div class="flame-outline" data-depth='0.25'>
+		    <div class="flame-outline" data-depth='0.25'>
 		      <object data="assets/flamesss.png" type="image/png"></object>
 		    </div>
 		  </div>
@@ -133,7 +138,7 @@
             init();
             </script>
         </div>
-      </div>
+      </div>-->
     </div>
   </body>
 

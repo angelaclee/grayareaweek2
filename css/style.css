@@ -1,9 +1,5 @@
 body {
-    width: 800px;
-    height: 30vh;
-    margin: 0;
-    background: black;
-    overflow: hidden;
+
   }
 
 
@@ -25,16 +21,19 @@ h1 {
     font-family: "sprat";
     src: url("sprat.woff2") format("woff2"),
          url("sprat.woff") format("woff");
-  }
+}
 
-  #raincontainer {
-    width: 800px;
-  }
+#raincontainer {
+  width: 800px;
+  height: 30vh;
+  margin: 0;
+  background: black;
+  overflow: hidden;
+}
 
-.spring {
+#spring {
   position: absolute;
-  top: 35%;
-  left: 100%;
   background-color: blue;
+  overflow: hidden;
 
 }
