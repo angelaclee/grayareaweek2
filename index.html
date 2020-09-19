@@ -9,12 +9,31 @@
   <body>
     <script src="/libraries/p5.min.js"></script>
     <script src="sketch.js"></script>
+    <script src="js/fire.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
     <div id='bigdiv'>
       <div class="season">
         <div class="spring"></div>
       </div>
-      <div class="season"></div>
+      <div class="season">
+		  <div id="scene">
+		    <div class="flame-outline" data-depth='1.0'>
+		      <object data="https://www.clipartmax.com/png/full/326-3263841_race-car-flames-svg-free-techflourish-collections-fire-clipart-png.png" type="image/png"></object>
+		    </div>
+		        <div class="flame-outline" data-depth = '0.75'>
+		      <object data="https://www.clipartmax.com/png/full/326-3263841_race-car-flames-svg-free-techflourish-collections-fire-clipart-png.png" type="image/png"></object>
+		    </div>
+		        <div class="flame-outline" data-depth = '0.5'>
+		      <object data="https://www.clipartmax.com/png/full/326-3263841_race-car-flames-svg-free-techflourish-collections-fire-clipart-png.png" type="image/png"></object>
+		    </div>
+		        <div class="flame-outline" data-depth='0.25'>
+		      <object data="https://www.clipartmax.com/png/full/326-3263841_race-car-flames-svg-free-techflourish-collections-fire-clipart-png.png" type="image/png"></object>
+		    </div>
+		  </div>
+
+	  </div>
       <div class="season"></div>
       <div class="season">
       	<div id="raincontainer">

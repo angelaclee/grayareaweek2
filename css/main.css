@@ -9,3 +9,18 @@
 	border: 4px solid black;
 	margin: 4px;
 }
+
+#scene {
+  width: 100vw;
+  height: 50vh;
+}
+
+.flame-outline {
+  position: absolute;
+  color: red;
+  height: 100%;
+  width: auto;
+  left: 0%;
+  bottom: 0%;
+  overflow: hidden;
+}
